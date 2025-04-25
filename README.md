@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Cyberpunk UI](https://img.shields.io/badge/UI-Matrix_Cyberpunk-00ff00?style=flat-square)](#)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Hosted_on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
+[![Live Demo](https://img.shields.io/badge/Frontend-Live-brightgreen?style=flat-square&logo=vercel)](https://decrypt-mike-ai-frontend.vercel.app)
+[![Open Source](https://img.shields.io/badge/Open--Source-GitHub-blue?style=flat-square&logo=github)](https://github.com/DecryptMike/DecryptMike-AI-Frontend)
+[![MIT License](https://img.shields.io/badge/License-MIT-black?style=flat-square)](LICENSE)
 
-## Getting Started
+<p align="center">
+  <img src="DecryptMikeLogo.png" alt="DecryptMike Logo" style="max-width: 100%; height: auto;"/>
+</p>
 
-First, run the development server:
+<h2 align="center">
+  💻 DecryptMike AI Phishing Detector - Frontend
+</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h5 align="center">A Matrix-themed AI Phishing Detector built with Next.js, Tailwind CSS, and FastAPI. Features animated UI, email emotion analysis via BERT, and seamless integration with a HuggingFace-powered backend. Fully responsive and deployed on Vercel.
+</h5>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Screenshot
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Frontend
 
-## Learn More
+<p align="center">
+  <img src="DecryptMike Frontend Vercel.png" width="100%" alt="Sign In Page">
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Matrix rain background (GIF + CSS overlay)
+- Email subject + body input
+- Animated robot loader
+- AI-powered phishing/emotion detection
+- Result box with dynamic icons and colors
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚙️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `Next.js` (App Router)
+- `TypeScript`
+- `Tailwind CSS`
+- `FastAPI` (backend)
+- `Render` + `Vercel` for hosting
+
+---
+
+## 🔗 Live Demo
+
+👉 [https://decrypt-mike-ai-frontend.vercel.app](https://decrypt-mike-ai-frontend.vercel.app)
+
+---
+
+## 🔗 Related Projects
+
+- 🔒 [DecryptMike-AI-Backend Repo](https://github.com/DecryptMike/DecryptMike-AI-Backend)
+- 📘 [Backend Swagger Docs](https://decryptmike-backend.onrender.com/docs)
+
+---
+
+## 🎯 Why I Built It
+
+As a cybersecurity-focused software engineer, I wanted to showcase my skills across frontend development, API consumption, and modern design. This frontend interfaces with my FastAPI backend to analyze email content and visualize results in a clean, responsive, Matrix-inspired interface.
+
+---
+
+## ⚠️ Legal Disclaimer
+
+This tool is intended for **educational and authorized personal use only**.  
+
+---
+
+## 💻 Built by [@DecryptMike](https://github.com/DecryptMike)
+
+---
