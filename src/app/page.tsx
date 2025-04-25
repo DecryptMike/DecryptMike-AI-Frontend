@@ -1,103 +1,143 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+  const [result, setResult] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setResult(null);
+
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/predict`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          subject,
+          body,
+        }),
+      });
+
+      const data = await res.json();
+      setResult(JSON.stringify(data));
+    } catch (error) {
+      console.error("❌ Fetch failed:", error);
+      setResult("Error: Could not connect to backend");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <main
+      className="min-h-screen text-green-400 font-mono bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/matrix-rain-v2.png')",
+        backgroundRepeat: "repeat",
+        backgroundSize: "cover",
+        backgroundColor: "#000",
+      }}
+    >
+      <div className="flex flex-col items-center justify-center min-h-screen bg-black bg-opacity-70 p-8">
+        {/* Logo + Header */}
+        <div className="flex flex-col items-center mb-6 border border-green-400 bg-black bg-opacity-80 px-6 py-4 rounded-lg">
+          <img src="/a34.png" alt="Decrypt Mike Logo" className="h-20 mb-2" />
+          <h1 className="text-3xl font-bold text-center">
+            Decrypt Mike AI Phishing Detector
+          </h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Email Analyzer */}
+        <div className="w-full max-w-2xl bg-black bg-opacity-80 rounded-lg p-6 border border-green-400">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            <div>
+              <label className="block text-sm mb-1">Email Subject</label>
+              <input
+                type="text"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className="w-full px-4 py-2 bg-black border border-green-400 rounded text-green-400 placeholder-green-600 focus:outline-none"
+                placeholder="e.g. Update your account info"
+              />
+            </div>
+            <div>
+              <label className="block text-sm mb-1">Email Body</label>
+              <textarea
+                rows={6}
+                value={body}
+                onChange={(e) => setBody(e.target.value)}
+                className="w-full px-4 py-2 bg-black border border-green-400 rounded text-green-400 placeholder-green-600 focus:outline-none"
+                placeholder="Paste the email message here..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              disabled={isLoading}
+              className={`${
+                isLoading ? "bg-green-800 cursor-not-allowed" : "bg-green-400 hover:bg-green-300"
+              } text-black font-bold py-2 px-4 rounded transition`}
+            >
+              {isLoading ? "Analyzing..." : "Analyze Email"}
+            </button>
+          </form>
+
+          {/* Loader */}
+          {isLoading && (
+            <div className="flex justify-center mt-6">
+              <img
+                src="/robot-run.gif"
+                alt="Loading animation"
+                className="h-24 w-auto animate-pulse"
+              />
+            </div>
+          )}
+
+          {/* Result Box */}
+          {result && !isLoading && (() => {
+            const parsed = JSON.parse(result);
+            const label = parsed.label.toLowerCase();
+            const confidence = parsed.confidence;
+
+            const emotionIcons: { [key: string]: string } = {
+              joy: "✅",
+              love: "💚",
+              surprise: "🤯",
+              anger: "⚠️",
+              sadness: "😢",
+              fear: "❌",
+              disgust: "🚫",
+            };
+
+            const emotionColors: { [key: string]: string } = {
+              joy: "text-green-400 border-green-400",
+              love: "text-pink-400 border-pink-400",
+              surprise: "text-yellow-400 border-yellow-400",
+              anger: "text-red-400 border-red-400",
+              sadness: "text-blue-400 border-blue-400",
+              fear: "text-orange-400 border-orange-400",
+              disgust: "text-purple-400 border-purple-400",
+            };
+
+            const icon = emotionIcons[label] || "🤖";
+            const colorClass = emotionColors[label] || "text-white border-white";
+
+            return (
+              <div className={`mt-4 p-4 border rounded ${colorClass} bg-black bg-opacity-80`}>
+                <p className="text-xl font-bold">
+                  {icon} Detected Emotion: {label.toUpperCase()}
+                </p>
+                <p className="text-sm mt-1">Confidence: {confidence}%</p>
+              </div>
+            );
+          })()}
+        </div>
+      </div>
+    </main>
   );
 }
