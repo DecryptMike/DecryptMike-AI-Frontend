@@ -4,6 +4,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Vercel](https://img.shields.io/badge/Hosted_on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
 [![Live Demo](https://img.shields.io/badge/Frontend-Live-brightgreen?style=flat-square&logo=vercel)](https://decrypt-mike-ai-frontend.vercel.app)
+[![Transformers](https://img.shields.io/badge/Transformers-HuggingFace-yellow?style=flat-square&logo=huggingface)](https://huggingface.co/bhadresh-savani/bert-base-uncased-emotion)
 [![Open Source](https://img.shields.io/badge/Open--Source-GitHub-blue?style=flat-square&logo=github)](https://github.com/DecryptMike/DecryptMike-AI-Frontend)
 [![MIT License](https://img.shields.io/badge/License-MIT-black?style=flat-square)](LICENSE)
 
