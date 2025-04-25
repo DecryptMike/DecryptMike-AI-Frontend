@@ -21,16 +21,6 @@
 
 ---
 
-## 📸 Screenshot
-
-### Frontend
-
-<p align="center">
-  <img src="DecryptMike Frontend Vercel.png" width="100%" alt="Sign In Page">
-</p>
-
----
-
 ## ✨ Features
 
 - Matrix rain background (GIF + CSS overlay)
@@ -48,6 +38,16 @@
 - `Tailwind CSS`
 - `FastAPI` (backend)
 - `Render` + `Vercel` for hosting
+
+---
+
+## 📸 Screenshot
+
+### Frontend
+
+<p align="center">
+  <img src="DecryptMike Frontend Vercel.png" width="100%" alt="Sign In Page">
+</p>
 
 ---
 
