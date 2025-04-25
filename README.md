@@ -78,3 +78,10 @@ This tool is intended for **educational and authorized personal use only**.
 ## 💻 Built by [@DecryptMike](https://github.com/DecryptMike)
 
 ---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20For-Web%20Development-blue?style=for-the-badge&logo=next.js"/>
+  <img src="https://img.shields.io/badge/Made%20By-DecryptMike-limegreen?style=for-the-badge&logo=github"/>
+  <img src="https://img.shields.io/badge/Inspired%20By-Cybersecurity-darkgreen?style=for-the-badge&logo=matrix"/>
+</p>
+
