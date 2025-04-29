@@ -1,12 +1,13 @@
-[![Next.js](https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Cyberpunk UI](https://img.shields.io/badge/UI-Matrix_Cyberpunk-00ff00?style=flat-square)](#)
-[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
-[![Vercel](https://img.shields.io/badge/Hosted_on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/)
-[![Live Demo](https://img.shields.io/badge/Frontend-Live-brightgreen?style=flat-square&logo=vercel)](https://decrypt-mike-ai-frontend.vercel.app)
-[![Transformers](https://img.shields.io/badge/Transformers-HuggingFace-yellow?style=flat-square&logo=huggingface)](https://huggingface.co/bhadresh-savani/bert-base-uncased-emotion)
-[![Open Source](https://img.shields.io/badge/Open--Source-GitHub-blue?style=flat-square&logo=github)](https://github.com/DecryptMike/DecryptMike-AI-Frontend)
+![Next_js](https://img.shields.io/badge/Next_js-13-000000?style=flat&logo=next.js&logoColor=white&labelColor=3f3f46)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript&logoColor=white&labelColor=3f3f46)
+![UI-Matrix Cyberpunk](https://img.shields.io/badge/UI-Matrix%20Cyberpunk-00FFAA?style=flat&labelColor=3f3f46)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3-38BDF8?style=flat&logo=tailwindcss&logoColor=white&labelColor=3f3f46)
+![Hosted on-Vercel](https://img.shields.io/badge/Hosted%20on-Vercel-000000?style=flat&logo=vercel&logoColor=white&labelColor=3f3f46)
+![Frontend-Live](https://img.shields.io/badge/Frontend-Live-22C55E?style=flat&labelColor=3f3f46)
+![Transformers-HuggingFace](https://img.shields.io/badge/Transformers-HuggingFace-FBBF24?style=flat&logo=huggingface&logoColor=black&labelColor=3f3f46)
+![Open-Source-GitHub](https://img.shields.io/badge/Open--Source-GitHub-0078D4?style=flat&logo=github&logoColor=white&labelColor=3f3f46)
 ![License](https://img.shields.io/github/license/DecryptMike/DecryptMike-Web-Vuln-Scanner)
+
 
 <p align="center">
   <img src="DecryptMikeLogo.png" alt="DecryptMike Logo" style="max-width: 100%; height: auto;"/>
